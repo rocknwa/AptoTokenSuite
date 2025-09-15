@@ -1,0 +1,43 @@
+[package]
+name = "fungible_token"
+version = "1.0.0"
+authors = ["Therock Ani <anitherock44@gmail.com>"]
+license = "Apache-2.0"
+upgrade_policy = "compatible"
+
+[addresses]
+fungible_token = "_"  # Use specific address instead of "_"
+std = "0x1"
+aptos_std = "0x1"
+aptos_framework = "0x1"
+
+# Option 1: Git dependencies (recommended for production)
+[dependencies.AptosFramework]
+git = "https://github.com/aptos-labs/aptos-core.git"
+rev = "mainnet"
+subdir = "aptos-move/framework/aptos-framework"
+
+[dependencies.AptosStdlib]
+git = "https://github.com/aptos-labs/aptos-core.git"
+rev = "mainnet"
+subdir = "aptos-move/framework/aptos-stdlib"
+
+[dependencies.MoveStdlib]
+git = "https://github.com/aptos-labs/aptos-core.git"
+rev = "mainnet"
+subdir = "aptos-move/framework/move-stdlib"
+
+# Option 2: Local dependencies (uncomment if you have local aptos-core)
+# [dependencies.AptosFramework]
+# local = "../aptos-core/aptos-move/framework/aptos-framework"
+#
+# [dependencies.AptosStdlib]
+# local = "../aptos-core/aptos-move/framework/aptos-stdlib"
+#
+# [dependencies.MoveStdlib]
+# local = "../aptos-core/aptos-move/framework/move-stdlib"
+
+[dev-addresses]
+fungible_token = "0xCAFE"
+
+[dev-dependencies]
