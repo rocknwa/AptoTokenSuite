@@ -94,7 +94,7 @@ INITIAL_MINT_AMOUNT=1000000
 
 ## 📚 Next Steps
 
-- Read the full [README.md](README.md) for detailed documentation
+- Read the full [Complete-Setup-Guide](Complete-Setup-Guide.md) for detailed documentation
 - Check [SECURITY.md](SECURITY.md) for security best practices
 - Explore contract customization options
 - Build a frontend interface
