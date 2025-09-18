@@ -18,7 +18,7 @@ A comprehensive scaffold for building on Aptos blockchain, similar to Scaffold-E
 
 ```bash
 # Clone the scaffold
-git clone <your-repo-url>
+git clone https://github.com/rocknwa/aptos-scaffold.git
 cd aptos-scaffold
 
 # Install Aptos CLI (see detailed instructions below)

@@ -23,7 +23,7 @@ Get your Aptos token up and running in just 5 minutes!
 ### Step 1: Setup (30 seconds)
 ```bash
 # Clone and setup
-git clone <your-scaffold-repo>
+git clone https://github.com/rocknwa/aptos-scaffold.git
 cd aptos-scaffold
 
 # Make scripts executable
@@ -88,8 +88,8 @@ INITIAL_MINT_AMOUNT=1000000
 ```
 
 ### Update Contract
-1. Edit `sources/my_token.move`
-2. Update tests in `tests/my_token_tests.move`
+1. Edit `sources/fungible_token.move`
+2. Update tests in `tests/token_tests.move`
 3. Run `make upgrade` to deploy changes
 
 ## 📚 Next Steps
