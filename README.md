@@ -19,7 +19,7 @@ To quickly set up and interact with the contracts in this repository, please ref
 
 - [Quickstart Guide](docs/QUICKSTART.md) — minimal setup to deploy and test contracts.  
 - [Complete Setup Guide](docs/Complete-Setup-Guide.md) — detailed instructions.  
-- [Security Best Practices](docs/SECURITY.md) — recommendations for practices.
+- [Security Best Practices](docs/SECURITY.md) — recommendations for best practices.
 
 ---
 
