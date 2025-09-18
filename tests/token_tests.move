@@ -405,3 +405,4 @@ module fungible_token::my_token_tests {
         assert!(!my_token::is_frozen(user2_addr), 21);
     }
 }
+ 

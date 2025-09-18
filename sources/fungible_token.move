@@ -125,38 +125,38 @@ module fungible_token::my_token {
         coin::register<MyToken>(account);
     }
 
-    /// Get the balance of an account
     #[view]
+    /// Get the balance of an account
     public fun balance(account: address): u64 {
         coin::balance<MyToken>(account)
     }
 
-    /// Get token supply
     #[view]
+    /// Get token supply
     public fun supply(): option::Option<u128> {
         coin::supply<MyToken>()
     }
 
-    /// Get token name
     #[view]
+    /// Get token name
     public fun name(): string::String {
         coin::name<MyToken>()
     }
 
-    /// Get token symbol
     #[view]
+    /// Get token symbol
     public fun symbol(): string::String {
         coin::symbol<MyToken>()
     }
 
-    /// Get token decimals
     #[view]
+    /// Get token decimals
     public fun decimals(): u8 {
         coin::decimals<MyToken>()
     }
 
-    /// Check if account is registered
     #[view]
+    /// Check if account is registered
     public fun is_registered(account: address): bool {
         coin::is_account_registered<MyToken>(account)
     }
@@ -185,8 +185,8 @@ module fungible_token::my_token {
         coin::unfreeze_coin_store<MyToken>(account, &caps.freeze_cap);
     }
 
-    /// Check if account is frozen (placeholder - actual implementation depends on framework version)
     #[view]
+    /// Check if account is frozen (placeholder - actual implementation depends on framework version)
     public fun is_frozen(_account: address): bool {
         // Note: coin::is_frozen might not be available in all framework versions
         // Return false as default or implement custom freeze tracking

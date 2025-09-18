@@ -1,20 +1,28 @@
 [package]
+# CUSTOMIZE: Change this to your project name (use snake_case)
 name = "fungible_token"
 version = "1.0.0"
+# CUSTOMIZE: Add your information here
 authors = ["Therock Ani <anitherock44@gmail.com>"]
 license = "Apache-2.0"
 upgrade_policy = "compatible"
 
 [addresses]
-fungible_token = "_"  # Use specific address instead of "_"
+# CUSTOMIZE: Replace with your project name and wallet address
+# This should match your Petra wallet address
+fungible_token = "0xdffbb0f2a817c9e3ed7ec6670b24f4a4abc588b694082fd2be6e3fc0ea0ad894"  
+
+# Standard Aptos addresses - DO NOT CHANGE
 std = "0x1"
 aptos_std = "0x1"
 aptos_framework = "0x1"
 
-# Option 1: Git dependencies (recommended for production)
+
+# Git dependencies (recommended for production)
+# These pull the latest stable framework code
 [dependencies.AptosFramework]
 git = "https://github.com/aptos-labs/aptos-core.git"
-rev = "mainnet"
+rev = "mainnet" # Use "testnet" for testnet-specific features
 subdir = "aptos-move/framework/aptos-framework"
 
 [dependencies.AptosStdlib]
@@ -27,7 +35,7 @@ git = "https://github.com/aptos-labs/aptos-core.git"
 rev = "mainnet"
 subdir = "aptos-move/framework/move-stdlib"
 
-# Option 2: Local dependencies (uncomment if you have local aptos-core)
+# Alternative: Local dependencies (uncomment if you have local aptos-core)
 # [dependencies.AptosFramework]
 # local = "../aptos-core/aptos-move/framework/aptos-framework"
 #
@@ -37,7 +45,43 @@ subdir = "aptos-move/framework/move-stdlib"
 # [dependencies.MoveStdlib]
 # local = "../aptos-core/aptos-move/framework/move-stdlib"
 
+# Development addresses (used for testing)
 [dev-addresses]
+# CUSTOMIZE: Match your project name but keep the test address
 fungible_token = "0xCAFE"
 
+# Development dependencies (optional)
 [dev-dependencies]
+# Add any additional dependencies needed for testing
+
+# CUSTOMIZATION GUIDE:
+# ====================
+# 
+# 1. Change 'my_awesome_token' everywhere to your project name
+#    - Must be snake_case (lowercase with underscores)
+#    - Should match your main module name
+# 
+# 2. Replace '0xYOUR_WALLET_ADDRESS_HERE' with your actual wallet address
+#    - Get this from Petra wallet (Settings > Manage Account)
+#    - Must start with 0x
+#    - Should be 66 characters long (including 0x)
+# 
+# 3. Update author information
+#    - Replace with your name and email
+#    - You can add multiple authors: ["Name1 <email1>", "Name2 <email2>"]
+# 
+# 4. Consider the upgrade policy:
+#    - "compatible": Allows upgrades that don't break existing code
+#    - "immutable": Contract cannot be upgraded after deployment
+# 
+# Example customized version:
+# 
+# [package]
+# name = "defi_rewards_token"
+# authors = ["Alice Developer <alice@example.com>"]
+# 
+# [addresses]
+# defi_rewards_token = "0x1a2b3c4d5e6f7890abcdef1234567890abcdef1234567890abcdef1234567890"
+# 
+# [dev-addresses]
+# defi_rewards_token = "0xCAFE"
