@@ -9,8 +9,8 @@ upgrade_policy = "compatible"
 
 [addresses]
 # CUSTOMIZE: Replace with your project name and wallet address
-# This should match your Petra wallet address
-fungible_token = "0xdffbb0f2a817c9e3ed7ec6670b24f4a4abc588b694082fd2be6e3fc0ea0ad894"  
+# This should match your Petra wallet address when deploying, but for testing use the dev-addresses below or "_"
+fungible_token = "_"  
 
 # Standard Aptos addresses - DO NOT CHANGE
 std = "0x1"

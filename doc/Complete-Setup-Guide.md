@@ -28,6 +28,9 @@ brew install aptos
 # Initialize your Aptos account
 aptos init --network testnet
 
+# Or run this command and follow instructions for Account and Network set-up
+aptos init
+
 # Compile the contract
 aptos move compile
 
@@ -127,15 +130,16 @@ aptos init --network testnet
 ```
 aptos-scaffold/
 ├── sources/
-│   └── my_token.move          # Main fungible token contract
+│   └── fungible_token.move          # Main fungible token contract
 ├── tests/
-│   └── my_token_tests.move    # Comprehensive test suite
+│   └── token_tests.move    # Comprehensive test suite
 ├── Move.toml                  # Project configuration
 ├── README.md                  # This file
 └── scripts/                   # Deployment and interaction scripts
     ├── deploy.sh
     ├── initialize.sh
     └── interact.sh
+    |-monitor.sh
 ```
 
 ## 🎨 Customizing Your Project
@@ -169,7 +173,7 @@ your_project_name = "0xCAFE"  # Keep this for testing
 
 ### 2. Customize the Token Contract
 
-Edit `sources/my_token.move`:
+Edit `sources/fungible_token.move`:
 
 #### A. Change Module Declaration
 ```move
@@ -309,12 +313,12 @@ aptos move test --filter test_initialize_token
 
 ### Run Tests with Coverage
 ```bash
-aptos move test --coverage
+aptos move test --coverage --dev 
 ```
 
 ### Add New Tests
 
-1. Open `tests/my_token_tests.move`
+1. Open `tests/token_tests.move`
 2. Add your test function:
 ```move
 #[test]
@@ -336,6 +340,7 @@ aptos move compile
 
 ### 2. Deploy to Testnet
 ```bash
+# You can simply run `aptos move publish` after configuring addresses section of Move.toml with your wallet address
 aptos move publish --named-addresses your_project_name=YOUR_WALLET_ADDRESS
 ```
 
@@ -467,7 +472,7 @@ public entry fun transfer_with_burn(
 #### 1. "Account doesn't exist" Error
 ```bash
 # Solution: Fund your account first
-aptos account fund-with-faucet --account YOUR_ADDRESS
+https://aptos.dev/network/faucet
 ```
 
 #### 2. "Module not found" Error

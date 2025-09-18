@@ -37,10 +37,6 @@ test: ## Run all tests
 	@echo "🧪 Running tests..."
 	@aptos move test
 
-test-verbose: ## Run tests with verbose output
-	@echo "🧪 Running tests (verbose)..."
-	@aptos move test --verbose
-
 test-coverage: ## Run tests with coverage report
 	@echo "📊 Running tests with coverage..."
 	@aptos move test --coverage
