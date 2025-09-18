@@ -13,6 +13,16 @@ This is a production-ready template similar to Scaffold-ETH but for the Aptos bl
 
 ---
 
+## Getting Started
+
+To quickly set up and interact with the contracts in this repository, please refer to the documentation:
+
+- [Quickstart Guide](docs/QUICKSTART.md) — minimal setup to deploy and test contracts.  
+- [Complete Setup Guide](docs/Complete-Setup-Guide.md) — detailed instructions.  
+- [Security Best Practices](docs/SECURITY.md) — recommendations for practices.
+
+---
+
 ### 👨‍💻 **Author**
 - **Name**: Therock Ani  
 - **Email**: anitherock44@gmail.com  
@@ -33,11 +43,7 @@ This is a production-ready template similar to Scaffold-ETH but for the Aptos bl
 ### 🤝 **Contributing**
 We welcome contributions from the community!  
 If you’d like to improve this scaffold:  
-1. Fork the repository  
-2. Create a new branch (`git checkout -b feature-name`)  
-3. Make your changes and commit (`git commit -m "Add feature"`)  
-4. Push to your branch (`git push origin feature-name`)  
-5. Open a Pull Request  
+- Please read the [CONTRIBUTING.md](./CONTRIBUTING.md) file for details on how to contribute to this project. 
 
 Your ideas, fixes, and improvements help the ecosystem grow! 🌱  
 
